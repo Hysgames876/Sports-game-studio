@@ -1,6 +1,36 @@
-<html>
-<head><title>Wolfe's Test Page</title></head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Textbox with JS</title>
+</head>
+<body>
+    <h2>Dynamically Create a Textbox</h2>
+    <button onclick="addTextbox()">Add Textbox</button>
     
-  </body>
+    <!-- This div will hold the new textboxes -->
+    <div id="container"></div>
+
+    <script>
+        function addTextbox() {
+            // 1. Create the new input element.
+            let input = document.createElement("input");
+            // Set the type to 'text' for a single-line textbox.
+            input.type = "text"; 
+            input.name = "dynamicTextbox";
+            input.placeholder = "New textbox"; // Add a placeholder attribute.
+            
+            // Optional: Add a line break for better layout
+            let br = document.createElement("br");
+            
+            // 2. Find the container element in the HTML document.
+            let container = document.getElementById("container");
+            
+            // 3. Append the new elements to the container.
+            container.appendChild(br);
+            container.appendChild(input);
+        }
+    </script>
+</body>
 </html>
