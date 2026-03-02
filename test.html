@@ -4,18 +4,24 @@
 <title>Sports team manager tycoon</title>   
 </head>
 <body>
-<p1>Dear player,</p1>
+<p1>Hello player,what is your name. </p1>
 <button onclick="getName()">Click to enter your name</button>
 
     <script>
         function getName(username) {
             // Use prompt() to ask the user for their name
             let userName = prompt("Please enter your name:", "Guest"); // "Guest" is the optional default value
-            
+            let SportsTeam = prompt("NBA"); // "NBAt" is the default value right now
             // Check if the user entered a name or clicked Cancel
             if (userName != null && userName !== "") {
                 // Update the HTML content with the user's name
-                document.getElementById("output").innerHTML = `Hello, ${userName}!`;
+                document.getElementById("output").innerHTML = `Hello, ${userName}, 
+                we the ${SportsTeam} have noticed that you have recently gotten injured and can no longer play sports, but we have a team that just lost it's coach, and were wondering if you would like to take that postion
+                
+                
+                
+                Sicerely,
+                ${SportsTeam}`;
             } else {
                 document.getElementById("output").innerHTML = "User canceled or didn't enter a name.";
             }
