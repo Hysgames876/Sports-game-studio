@@ -5,11 +5,21 @@
 </head>
 <body>
 <p1>Dear ,</p1>
-<button onClick="getName()">Click here</button>
-<script>
-  function getName(){
-   let var userName = prompt("what is your name");
-  }
-</script>
+<button onclick="getName()">Click to enter your name</button>
+
+    <script>
+        function getName() {
+            // Use prompt() to ask the user for their name
+            let userName = prompt("Please enter your name:", "Guest"); // "Guest" is the optional default value
+            
+            // Check if the user entered a name or clicked Cancel
+            if (userName != null && userName !== "") {
+                // Update the HTML content with the user's name
+                document.getElementById("output").innerHTML = `Hello, ${userName}!`;
+            } else {
+                document.getElementById("output").innerHTML = "User canceled or didn't enter a name.";
+            }
+        }
+    </script>
 </body>
 </Html>  
